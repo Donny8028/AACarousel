@@ -491,9 +491,8 @@ public class AACarousel: UIView,UIScrollViewDelegate {
 
         let width = scrollView.frame.width
         let currentPage = ((scrollView.contentOffset.x - width / 2) / width) - 1.5
-        let scrollDirect = direction.init(rawValue: Int(currentPage))
-
-        switch scrollDirect! {
+        guard let scrollDirect = direction.init(rawValue: Int(currentPage)) else { return }
+        switch scrollDirect {
         case .none:
             break
         default:
