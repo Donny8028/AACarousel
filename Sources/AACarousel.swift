@@ -496,8 +496,8 @@ public class AACarousel: UIView,UIScrollViewDelegate {
         case .none:
             break
         default:
-            handleIndex(scrollDirect!)
-            scrollToImageView(scrollDirect!)
+            handleIndex(scrollDirect)
+            scrollToImageView(scrollDirect)
             break
         }
 
